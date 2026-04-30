@@ -1,3 +1,7 @@
+**Work in Progress**  
+> This repository contains ongoing work for a master’s thesis.  
+> The data, code, and documentation are still being refined and may change.
+
 # Student Politics as a Pathway to Parliament: A Case Study from the University of Iceland, 1931–2024
 
 Master’s thesis completed as part of the M.A. in Quantitative Methods for the Social Sciences at Columbia University.
