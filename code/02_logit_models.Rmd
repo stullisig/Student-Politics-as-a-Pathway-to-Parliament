@@ -1,0 +1,64 @@
+---
+title: "Logistic Regression Models"
+author: "Sturlaugur Sigurðsson"
+output: html_document
+---
+
+# Load packages
+
+```{r}
+library(dplyr)
+library(pscl)
+```
+
+# Load dataset
+
+```{r}
+df <- read.csv("data/processed/student_politics_final.csv")
+```
+
+# Run logit model
+
+```{r}
+model1 <- glm(MP ~ association + gender + cohort + ticket_position,
+              data = df,
+              family = binomial(link = "logit"))
+summary(model1)
+```
+
+# Examine model fit
+
+```{r}
+pR2(model1)
+```
+
+# Ticket position removed
+
+```{r}
+model1 <- glm(MP ~ association + gender + cohort,
+              data = df,
+              family = binomial(link = "logit"))
+summary(model1)
+```
+
+# Examine model fit
+
+```{r}
+pR2(model1)
+```
+
+# Weighted robustness check
+
+```{r}
+df$temporal_weight <- ifelse(df$cohort == "1930s-1950s", 0.5,
+                      ifelse(df$cohort == "1960s-1980s", 1,
+                             1.5))
+
+model_weighted <- glm(
+  MP ~ association + gender + cohort,
+  data = df,
+  family = binomial(link = "logit"),
+  weights = temporal_weight
+)
+summary(model_weighted)
+```

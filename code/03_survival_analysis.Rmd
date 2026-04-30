@@ -1,0 +1,43 @@
+---
+title: "Survival Models"
+author: "Sturlaugur Sigurðsson"
+output: html_document
+---
+
+# Load packages
+
+```{r}
+library(dplyr)
+library(survival)
+```
+
+# Load dataset
+
+```{r}
+df <- read.csv("data/processed/student_politics_final.csv")
+```
+
+# Construct survival variables
+
+```{r}
+df$time <- ifelse(df$MP == 1,
+                  df$year_parliament - df$year_student_pol,
+                  2026 - df$year_student_pol)
+
+df$event <- df$MP
+```
+
+# Run main cox model
+
+```{r}
+model1 <- glm(MP ~ association + gender + cohort + ticket_position,
+              data = df,
+              family = binomial(link = "logit"))
+summary(model1)
+```
+
+# Hazard ratios
+
+```{r}
+exp(coef(cox_model))
+```

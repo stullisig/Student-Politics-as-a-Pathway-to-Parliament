@@ -1,0 +1,57 @@
+---
+title: "Data Cleaning"
+author: "Sturlaugur Sigurðsson"
+output: html_document
+---
+
+# Data Cleaning
+
+This file prepares the analytical dataset used in the thesis.
+
+```{r setup, message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+## Load data
+
+```{r}
+df <- read.csv("data/processed/student_politics_final.csv")
+```
+
+## Clean variables
+
+```{r}
+df_clean <- df %>%
+  mutate(
+    parliamentarian = as.numeric(parliamentarian),
+    minister = as.numeric(minister),
+    ran_for_council = as.numeric(ran_for_council),
+    student_council = as.numeric(student_council),
+    university_council = as.numeric(university_council),
+    gender = factor(gender),
+    cohort = factor(cohort),
+    student_association = factor(student_association)
+  )
+```
+
+## Restrict analytical sample
+
+```{r}
+df_analysis <- df_clean %>%
+  filter(ran_for_council == 1)
+```
+
+## Change names of variables for simplicity
+
+```{r}
+names(df)[names(df) == "parliamentarian"] <- "MP"
+names(df)[names(df) == "student_association"] <- "association"
+names(df)[names(df) == "student_year_decade"] <- "student_year_decade"
+```
+
+# Vaka as reference group
+
+```{r}
+df$association <- as.factor(df$association)
+df$association <- relevel(df$association, ref = "Vaka")
+```
