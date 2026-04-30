@@ -5,7 +5,11 @@
 \paperw11900\paperh16840\margl1440\margr1440\vieww13720\viewh10500\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 | Variable               | Description                                                     | Type        |\
+\f0\fs24 \cf0 # Codebook\
+\
+## Data Description\
+\
+| Variable               | Description                                                     | Type        |\
 |----------------------|-----------------------------------------------------------------|------------|\
 | name                 | Full name of individual                                         | Identifier |\
 | student_association  | Student political association affiliation                       | Categorical|\
@@ -23,7 +27,8 @@
 | party                | Political party affiliation (if applicable)                     | Categorical|\
 | year_parliament      | Year of entry into parliament                                   | Numeric    |\
 \
-**Notes:**\
+## Notes\
+\
 - Value `99` indicates missing or not applicable.\
 - The analytical sample includes only individuals who ran for student or university council.\
 - Final sample size: N = 856; parliamentary entries: 67.}
