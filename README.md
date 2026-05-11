@@ -7,12 +7,27 @@
 Master’s thesis completed as part of the M.A. in Quantitative Methods for the Social Sciences at Columbia University.
 
 ## Abstract
-Blablabla
+Political pathways into national office shape who becomes part of the political elite and whose
+interests and experiences are represented in democratic institutions. This study provides the first
+empirical examination of whether leadership in student politics at the University of Iceland is
+associated with subsequent entry into parliament between 1931 and 2024. Using an original
+longitudinal dataset of 856 student political leaders, compiled from archived student newspapers
+and parliamentary records, the study analyzes parliamentary entry through logistic regression and
+Cox proportional hazards models. The results present evidence of a systematic relationship,
+suggesting that student politics may serve as an early-stage pathway into national office. Of the
+856 individuals subject to analysis, 67 entered Alþingi at some point, at any capacity, between
+1931 and 2025, yielding **a total parliamentary entry rate of 7.8%**, substantially higher than the
+estimated 0.34% parliamentary participation in the general population. Cohort effects dominate
+the results, with later cohorts generally less likely to enter parliament and tending to do so later
+than those in the earliest cohort. Associations and gender do not display a consistent statistically
+significant relationship with parliamentary entry in the multivariable models. **The findings
+suggest that student politics at the University of Iceland functioned as a pathway into national
+political office during the period of analysis.**
 
 ## Data
-An original dataset was compiled from two primary sources: archived student publications available via [timarit.is](https://timarit.is/), and parliamentary records from the [althingi.is](https://www.althingi.is/altext/cv/is/?cstafur=S) biographies pages.
+An original dataset was compiled from two primary sources: archived student publications available via [*timarit.is*](https://timarit.is/), and parliamentary records from the [*althingi.is*](https://www.althingi.is/altext/cv/is/?cstafur=S) biographies pages.
 
-Refer to _____ for an exhaustive list of sources.
+Refer to the [*source inventory*](data/documentation/source_inventory.md) for an exhaustive list of sources.
 
 ## Data Construction
 The dataset was constructed by identifying individuals who ran for either the student council or the university council at the University of Iceland between 1931 and 2024. 
