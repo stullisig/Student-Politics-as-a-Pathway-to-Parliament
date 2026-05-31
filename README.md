@@ -1,6 +1,6 @@
 # Student Politics as a Pathway to Parliament: A Case Study from the University of Iceland, 1931–2024
 
-Master’s thesis completed as part of the M.A. in Quantitative Methods for the Social Sciences at Columbia University.
+Master’s thesis (3 credit) completed as part of the M.A. in Quantitative Methods for the Social Sciences at Columbia University.
 
 ## Abstract
 Political pathways into national office shape who becomes part of the political elite and whose
